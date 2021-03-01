@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © 28Software (https://28software.com)
+ * See LICENSE for the license details.
+ */
+declare(strict_types = 1);
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \TESoftware\GoogleCustomerReviews\ViewModel\Badge $viewModel */
+$viewModel = $block->getViewModel();
+
+?>
+
+<?php if ($viewModel->isBadgeEnabled()) : ?>
+<script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+<script>
+    window.renderBadge = function() {
+        var ratingBadgeContainer = document.createElement("div");
+        document.body.appendChild(ratingBadgeContainer);
+        window.gapi.load('ratingbadge', function() {
+            window.gapi.ratingbadge.render(ratingBadgeContainer, {
+                "merchant_id": <?= /** @noEscape */ $viewModel->getMerchantId() ?>,
+                "position": "<?= /** @noEscape */ $viewModel->getBadgePosition() ?>"
+            });
+        });
+    }
+</script>
+
+<?php endif; ?>

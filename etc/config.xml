@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 28Software (https://28software.com)
+  ~ See LICENSE for the license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <google>
+            <customer_reviews>
+                <enabled>0</enabled>
+                <merchant_id/>
+                <estimated_delivery_time>7</estimated_delivery_time>
+                <survey_position>CENTER_DIALOG</survey_position>
+                <show_products_in_survey>0</show_products_in_survey>
+                <badge_enabled>0</badge_enabled>
+                <badge_position>BOTTOM_RIGHT</badge_position>
+            </customer_reviews>
+        </google>
+    </default>
+</config>

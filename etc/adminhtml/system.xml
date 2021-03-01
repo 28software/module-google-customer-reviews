@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 28Software (https://28software.com)
+  ~ See LICENSE for the license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="google">
+            <group id="gcr" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google Customer Reviews</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Module enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>google/customer_reviews/enabled</config_path>
+                    <requires>
+                        <field id="merchant_id"/>
+                    </requires>
+                </field>
+                <field id="merchant_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Merchant ID</label>
+                    <config_path>google/customer_reviews/merchant_id</config_path>
+                    <comment>Your Merchant Center ID. You can get this value from the Google Merchant Center.</comment>
+                </field>
+                <group id="survey" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Survey options</label>
+                    <field id="survey_position" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Position</label>
+                        <comment>Specifies how the opt-in module's dialog box is displayed.</comment>
+                        <source_model>TESoftware\GoogleCustomerReviews\Model\Config\Source\SurveyPosition</source_model>
+                        <config_path>google/customer_reviews/survey_position</config_path>
+                    </field>
+                    <field id="show_products_in_survey" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show products ids</label>
+                        <comment>Insert products ids into survey snippet</comment>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>google/customer_reviews/show_products_in_survey</config_path>
+                    </field>
+                    <field id="estimated_delivery_time" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Estimated delivery time</label>
+                        <comment>Estimated delivery time is calculated by adding value from this field to date of placing order.</comment>
+                        <config_path>google/customer_reviews/estimated_delivery_time</config_path>
+                    </field>
+                </group>
+                <group id="badge" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Badge options</label>
+                    <field id="badge_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show badge</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>google/customer_reviews/badge_enabled</config_path>
+                    </field>
+                    <field id="badge_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Position</label>
+                        <comment>Position where badge is rendered.</comment>
+                        <source_model>TESoftware\GoogleCustomerReviews\Model\Config\Source\BadgePosition</source_model>
+                        <config_path>google/customer_reviews/badge_position</config_path>
+                        <depends>
+                            <field id="badge_enabled">1</field>
+                        </depends>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

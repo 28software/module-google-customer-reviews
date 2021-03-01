@@ -1,0 +1,34 @@
+<?php
+/**
+ * Copyright © 28Software (https://28software.com)
+ * See LICENSE for the license details.
+ */
+declare(strict_types = 1);
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \TESoftware\GoogleCustomerReviews\ViewModel\Survey $viewModel */
+$viewModel = $block->getViewModel();
+
+?>
+
+<?php if ($viewModel->isEnabled()) : ?>
+<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+<script>
+    window.renderOptIn = function() {
+        window.gapi.load('surveyoptin', function() {
+            window.gapi.surveyoptin.render(
+                {
+                    "merchant_id":"<?= /** @noEscape */ $viewModel->getMerchantId() ?>",
+                    "order_id": "<?= /** @noEscape */ $viewModel->getOrderId() ?>",
+                    "email": "<?= /** @noEscape */ $viewModel->getCustomerEmail() ?>",
+                    "delivery_country": "<?= /** @noEscape */ $viewModel->getDeliveryCountry() ?>",
+                    "estimated_delivery_date": "<?= /** @noEscape */ $viewModel->getEstimatedDeliveryDate() ?>",
+                    <?php if ($viewModel->isShowProductsInSurvey()) : ?>
+                    "products": <?= /** @noEscape */ $viewModel->getProductsGtinsJson() ?>,
+                    <?php endif; ?>
+                    "opt_in_style": "<?= /** @noEscape */ $viewModel->getPosition() ?>"
+                });
+        });
+    }
+</script>
+<?php endif; ?>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 28Software (https://28software.com)
+  ~ See LICENSE for the license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="TESoftware\GoogleCustomerReviews\Api\EstimatedDeliveryInterface"
+                type="TESoftware\GoogleCustomerReviews\Model\EstimatedDelivery"/>
+</config>
