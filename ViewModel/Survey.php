@@ -138,6 +138,6 @@ class Survey implements ArgumentInterface
             $array[] = ['gtin' => $item->getSku()];
         }
 
-        return $this->json->encode($array);
+        return $this->json->serialize($array);
     }
 }
