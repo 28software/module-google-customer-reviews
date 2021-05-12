@@ -9,30 +9,14 @@ Google Customer Reviews extension for Magento 2.
 # Installation
 ## Composer
 
-Download composer `wget http://getcomposer.org/composer.phar`
-
 ```bash
-composer config repositories.28software-google-customer-reviews git git@bitbucket.org:28software/module-google-customer-reviews.git
 composer require 28software/module-google-customer-reviews
 ```
 
-## Modman
-Download [modman](https://github.com/colinmollenhour/modman) `bash < <(wget -q --no-check-certificate -O - https://raw.github.com/colinmollenhour/modman/master/modman-installer)`
+# Supported Magento versions
 
-In the Magento 2 directory
-```bash
-modman init
-```
-
-Clone the repository, run the command from Magento 2 root directory:
-```bash
-modman clone git@bitbucket.org:28software/module-google-customer-reviews.git
-```
-
-In order to update the repository with the changes from remote branch run the command:
-```bash
-modman update 28software/module-google-customer-reviews
-``` 
+- CE: 2.3.x
+- EE: 2.3.x
 
 # Authors
 
