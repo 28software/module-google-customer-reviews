@@ -1,7 +1,7 @@
 {
     "name": "28software/module-google-customer-reviews",
     "description": "Google Customer Reviews extension for Magento 2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [

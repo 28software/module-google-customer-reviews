@@ -15,12 +15,12 @@ composer require 28software/module-google-customer-reviews
 
 # Supported Magento versions
 
-- CE: 2.3.x
-- EE: 2.3.x
+- CE: 2.3.x, 2.4.x
+- EE: 2.3.x, 2.4.x
 
 # Authors
 
-* [Serhii Koval](mailto:serhiyk@28software.com)
+* [Serhii Koval](mailto:sergiy.koval@gmail.com)
 
 # License
 Google Customer Reviews extension for Magento 2 is licensed under the MIT License - see the LICENSE file for details
