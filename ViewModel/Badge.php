@@ -53,4 +53,12 @@ class Badge implements ArgumentInterface
     {
         return $this->configuration->getBadgePosition();
     }
+
+    /**
+     * @return bool
+     */
+    public function isDisabledForMobile(): bool
+    {
+        return $this->configuration->isDisabledForMobile();
+    }
 }

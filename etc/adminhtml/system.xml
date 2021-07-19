@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright © 28Software (https://28software.com)
-  ~ See LICENSE for the license details.
-  -->
+/**
+ * Copyright © 28Software (https://28software.com)
+ * See LICENSE for the license details.
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="google">
@@ -53,6 +55,14 @@
                         <comment>Position where badge is rendered.</comment>
                         <source_model>TESoftware\GoogleCustomerReviews\Model\Config\Source\BadgePosition</source_model>
                         <config_path>google/customer_reviews/badge_position</config_path>
+                        <depends>
+                            <field id="badge_enabled">1</field>
+                        </depends>
+                    </field>
+                    <field id="disabled_for_mobile" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show badge</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>google/customer_reviews/disabled_for_mobile</config_path>
                         <depends>
                             <field id="badge_enabled">1</field>
                         </depends>

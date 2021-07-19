@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright © 28Software (https://28software.com)
-  ~ See LICENSE for the license details.
-  -->
+/**
+ * Copyright © 28Software (https://28software.com)
+ * See LICENSE for the license details.
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <google>
@@ -14,6 +16,7 @@
                 <show_products_in_survey>0</show_products_in_survey>
                 <badge_enabled>0</badge_enabled>
                 <badge_position>BOTTOM_RIGHT</badge_position>
+                <disabled_for_mobile>1</disabled_for_mobile>
             </customer_reviews>
         </google>
     </default>

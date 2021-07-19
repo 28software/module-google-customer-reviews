@@ -22,5 +22,9 @@ composer require 28software/module-google-customer-reviews
 
 * [Serhii Koval](mailto:sergiy.koval@gmail.com)
 
+## Maintaners
+
+* [Vadym Drobko](mailto:vdrobko@28software.com)
+
 # License
 Google Customer Reviews extension for Magento 2 is licensed under the MIT License - see the LICENSE file for details
