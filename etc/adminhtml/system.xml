@@ -37,7 +37,7 @@
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                         <config_path>google/customer_reviews/show_products_in_survey</config_path>
                     </field>
-                    <field id="estimated_delivery_time" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <field id="estimated_delivery_time" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                         <label>Estimated delivery time</label>
                         <comment>Estimated delivery time is calculated by adding value from this field to date of placing order.</comment>
                         <config_path>google/customer_reviews/estimated_delivery_time</config_path>
@@ -60,7 +60,8 @@
                         </depends>
                     </field>
                     <field id="disabled_for_mobile" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                        <label>Show badge</label>
+                        <label>Disable for mobile screens</label>
+                        <comment>Disable badge on mobile screens (less then 768px)</comment>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                         <config_path>google/customer_reviews/disabled_for_mobile</config_path>
                         <depends>
