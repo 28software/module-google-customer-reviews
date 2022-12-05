@@ -1,13 +1,17 @@
 {
     "name": "28software/module-google-customer-reviews",
     "description": "Google Customer Reviews extension for Magento 2",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
         {
             "name": "Serhii Koval",
-            "email": "serhiyk@28software.com"
+            "email": "skoval@28software.com"
+        },
+        {
+            "name": "Maksym Hryb",
+            "email": "mhryb@28software.com"
         },
         {
             "name": "Vadym Drobko",
