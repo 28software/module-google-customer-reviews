@@ -112,7 +112,7 @@ class Survey implements ArgumentInterface
      */
     public function getDeliveryCountry()
     {
-        return $this->session->getLastRealOrder()->getShippingAddress()->getCountryId();
+        return $this->session->getLastRealOrder()->getShippingAddress()?->getCountryId();
     }
 
     /**
